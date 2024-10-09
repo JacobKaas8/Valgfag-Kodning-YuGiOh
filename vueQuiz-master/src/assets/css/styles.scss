@@ -1,0 +1,230 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$link-decoration: none;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/variables-dark";
+
+// 4. Include any default map overrides here
+$custom-colors: (
+    "farve": $cyan-400,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "bootstrapComponents";
+
+// 5. Du kan lave styling her...
+
+
+
+
+
+
+
+.fixed-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+.card-body {
+    color: #0a53be;
+}
+
+.product-card {
+    border: 2px solid #2b2f32;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #f9f9f9;
+    width: 200px;
+    text-align: center;
+}
+
+
+
+.product-card .fixed-image {
+    border: 1px #2b2f32;
+}
+
+body {
+    background-color: #21303D;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 70px;
+
+}
+
+.fixed-height-img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-img-bottom-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent sort baggrund */
+    color: white;
+    padding: 10px;
+}
+
+.card {
+    position: relative; /* Make card position relative to allow absolute positioning inside */
+}
+
+
+.card:hover {
+    transform: scale(1.05); /* forstør ved hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.form-label {
+    padding-right: 5px;
+}
+
+
+.carousel-inner {
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    height: auto;
+    max-height: 600px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    z-index: 1; /* Ensure the text stays on top */
+}
+
+.pagination {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+.search-results-box {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 600px;
+    z-index: 1050; /* Ensure it appears above other content */
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.search-result-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.result-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+
+.special-card{
+    height: 400px;
+    object-fit: cover;
+
+
+
+}
+
+
+
+.navbar {
+    background-color: #0F161C !important; /* Force override */
+}
+
+
+.navbar .nav-link {
+    color: white !important; /* Force override */
+}
+
+
+
+
+.navbar .dropdown-menu {
+    background-color: #0F161C !important; /* Force override */
+}
+
+.navbar .dropdown-item {
+    color: white !important; /* Force override */
+}
+
+
+.navbar .nav-link:hover {
+    color: #FFD700 !important; /* Force override */
+}
+
+
+.form-label{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        bottom: 0px;
+        font-size: 0.9rem;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1rem;
+
+    }
+
+    .carousel-caption a {
+        font-size: 0.8rem;
+    }
+
+
+
+}
+
+
